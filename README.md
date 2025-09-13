@@ -1,69 +1,89 @@
-# React + TypeScript + Vite
+#  Color Guess Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive color guessing game built with **React**, **TypeScript**, and **Vite**!  
+Test your color recognition skills by matching the displayed HEX color to its visual representation.  
+Score points for correct guesses and challenge yourself to improve!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## Expanding the ESLint configuration
+- Random HEX color generation
+- RGB hint for each round
+- Score tracking
+- Responsive, modern UI
+- Built with React 19, TypeScript, and Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+##  Demo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+![Color Guess Game Screenshot](public/vite.svg)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+##  Installation
+
+```sh
+git clone https://github.com/your-username/color-guess-game.git
+cd color-guess-game
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+##  Usage
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Start the development server:
+
+```sh
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## Example
+
+1. The game displays a target HEX color (e.g. `#A1B2C3`) and its RGB hint.
+2. Three color boxes appear. Click the box that matches the target color.
+3. Correct guess: Score increases!  
+   Wrong guess: Score decreases.
+4. A new round starts automatically.
+
+```tsx
+import CheckColor from "./components/CheckColor";
+
+function App() {
+  return (
+    <>
+      <CheckColor />
+    </>
+  );
+}
+
+export default App;
+```
+
+---
+
+##  Project Structure
+
+```
+src/
+  components/
+    CheckColor.tsx   # Main game logic & UI
+  App.tsx            # App entry point
+  main.tsx           # React root
+  index.css          # Global styles
+public/
+  vite.svg           # Logo
+```
+---
+
+##  Credits
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
