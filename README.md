@@ -34,7 +34,6 @@ Score points for correct guesses and challenge yourself to improve!
 
 ---
 
----
 
 ##  Installation
 
