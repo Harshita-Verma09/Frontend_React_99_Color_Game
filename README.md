@@ -16,9 +16,23 @@ Score points for correct guesses and challenge yourself to improve!
 
 ---
 
-##  Demo
+##  How to Play
 
-![Color Guess Game Screenshot](public/vite.svg)
+1. **Target Color:**  
+   The game shows a HEX color code (e.g. `#A1B2C3`) and its RGB hint.
+
+2. 🟦🟥🟩 **Choose a Color:**  
+   Three colored boxes appear. Click the box that matches the target color.
+
+3. ✅ **Correct Guess:**  
+   Your score increases!  
+   ❌ **Wrong Guess:**  
+   Your score decreases.
+
+4.  **Next Round:**  
+   A new color challenge appears automatically.
+
+---
 
 ---
 
